@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class LoveCS
+{
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many times do you want it to repeat?");
+        int t = scan.nextInt();
+        int count = 1;
+        int total = 0;
+        while (count <= t){
+            total += count;
+            System.out.println(count + ". I love Computer Science!!");
+            count++;
+        }
+        System.out.println("This printed " + t + " times");
+        System.out.println("The total of all these repeats is " + total);
+    }
+}
