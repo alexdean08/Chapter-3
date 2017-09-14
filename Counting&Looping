@@ -1,4 +1,10 @@
 import java.util.Scanner;
+/**
+ * This program says "I love computer science" however many times you like
+ * 
+ * @author Alex Dean
+ * @version September 14, 2017
+ */
 
 public class LoveCS
 {
