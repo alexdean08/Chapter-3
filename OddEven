@@ -1,0 +1,67 @@
+import java.util.Scanner;
+/**
+ * This program tells you how many zeros, even, and odd integers are in an integer
+ * 
+ * @author Alex Dean
+ * @version September 14, 2017
+ */
+
+public class OddEven{
+
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int zero = 0;
+        int even = 0;
+        int odd = 0;
+        System.out.println("\fEnter a positive int");
+        int in = scan.nextInt();
+        while(in != 0){
+            if(in%10 == 0){
+                zero++;
+            }
+            else{
+                int t = in % 2;
+                if(t == 1){
+                    odd++;
+                }
+                else if(t==0){
+                    even++;
+                }
+                else{
+                    System.out.println("Error");
+                }
+            }
+            in/=10;
+        }
+        
+        if(even > 1){
+            System.out.println("There are " + even + " even digits");
+        }
+        else if (even == 1){
+            System.out.println("There is " + even + " even digit");
+        }
+        else{
+            System.out.println("There are no even digits");
+        }
+        
+        if(odd > 1){
+            System.out.println("There are " + odd + " odd digits");
+        }
+        else if (odd == 1){
+            System.out.println("There is " + odd + " odd digit");
+        }
+        else{
+            System.out.println("There are no odd digits");
+        }
+        
+        if(zero > 1){
+            System.out.println("There are " + zero + " zero digits");
+        }
+        else if (zero == 1){
+            System.out.println("There is " + zero + " zero digit");
+        }
+        else{
+            System.out.println("There are no zero digits");
+        }
+    }
+}
