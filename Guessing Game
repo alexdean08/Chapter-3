@@ -1,0 +1,35 @@
+/**
+ * This program lets you guess a number from 1 - 10
+ * 
+ * @author Alex Dean
+ * @version September 19, 2017
+ */
+
+import java.util.Scanner;
+import java.util.Random;
+public class Guess
+{
+    public static void main(String[] args)
+    {
+        int numToGuess; //Number the user tries to guess
+        int guess; //The user's guess
+        boolean yes = false;
+        Scanner scan = new Scanner(System.in);
+        Random generator = new Random();
+        numToGuess = generator.nextInt(10 - 2);//randomly generate the number to guess
+        System.out.println("Guess a number from 1 - 10");
+        //print message asking user to enter a guess
+        
+        while (yes == false) //keep going as long as the guess is wrong
+        {
+            guess = scan.nextInt();
+            if(guess == numToGuess){
+                yes = true;
+            }
+            else{
+                System.out.println("Wrong, guess again.");
+            }
+        }
+        System.out.println("Nice job!");
+    }
+}
